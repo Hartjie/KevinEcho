@@ -19,7 +19,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '5.0.x'
+        dotnet-version: '3.1.301'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -32,5 +32,5 @@ jobs:
       with:
         app-name: 'hartjieecho'
         slot-name: 'hartjie'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_71338c0992e94235b77dec5c97cb64eb }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_720baedad3be499988a31850cc91d0d5 }}
         package: ${{env.DOTNET_ROOT}}/myapp 
